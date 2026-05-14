@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre Mugular | Consultant Excel/VBA & Data Automation</title>
+    <meta name="description" content="Alexandre Mugular, Consultant Excel/VBA & Data Automation. Automatisation, dashboards et optimisation de processus.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <button class="logo" onclick="showView('view-home')">Alexandre Mugular</button>
+            <nav class="nav">
+                <button class="nav-link" onclick="showView('view-domaines')">Solutions</button>
+                <button class="nav-link" onclick="showView('view-projets')">Projets</button>
+                <button class="nav-link" onclick="showView('view-methode')">Méthode</button>
+                <button class="nav-link" onclick="showView('view-apropos')">À propos</button>
+                <button class="nav-link" onclick="showView('view-contact')">Contact</button>
+            </nav>
+            <div class="lang-toggle" style="margin-left: 40px; font-size: 0.9rem; font-weight: 500; color: var(--text-secondary);">
+                <span style="color: var(--primary-color);">FR</span> <span style="margin: 0 4px; opacity: 0.5;">|</span> <a href="index_en.html" style="transition: color 0.2s;">EN</a>
+            </div>
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="app-content">
+
+        <!-- VUE ACCUEIL -->
+        <div id="view-home" class="view active">
+            <section class="hero container" style="display: flex; flex-direction: column; justify-content: center; text-align: center; height: 100vh;">
+                <div class="hero-content" style="margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+                    <h1 class="hero-title">Consultant en automatisation <br>& optimisation de processus</h1>
+                    <h2 class="hero-subtitle">Excel/VBA, dashboards, pilotage et planification par la donnée</h2>
+                    <p class="hero-text">
+                        Je conçois des outils fiables, automatisés et simples d’utilisation pour aider les indépendants, PME et équipes opérationnelles à gagner du temps, réduire les erreurs et mieux exploiter leurs données.
+                    </p>
+                    <div class="hero-actions" style="justify-content: center;">
+                        <button onclick="showView('view-projets')" class="btn btn-primary">Voir les projets</button>
+                        <button onclick="showView('view-contact')" class="btn btn-secondary">Me contacter</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- VUE SOLUTIONS -->
+        <div id="view-domaines" class="view">
+            <section class="section container">
+                <div class="section-header">
+                    <h2 class="section-title">Ce que je peux créer</h2>
+                    <p class="section-subtitle">
+                        Des outils sur mesure pour automatiser, structurer, planifier et mieux exploiter vos données.
+                    </p>
+                </div>
+                
+                <div class="services-list">
+                    <div class="service-card">
+                        <h3 class="service-title">Outils Excel sur mesure</h3>
+                        <p class="service-text">Création d’outils adaptés à vos besoins métier : suivi d’activité, gestion de projet, production, facturation, reporting, bases internes ou workflows administratifs.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-title">Automatisation de tâches répétitives</h3>
+                        <p class="service-text">Macros VBA, boutons d’action, exports, génération de rapports, traitement de données, envoi d’emails, création de documents et réduction des manipulations manuelles.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-title">Dashboards & pilotage par la donnée</h3>
+                        <p class="service-text">Structuration des données, tableaux croisés dynamiques, indicateurs de performance, suivi de charge, productivité, coûts, délais et reporting opérationnel.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-title">Planification & optimisation des ressources</h3>
+                        <p class="service-text">Création d’outils de planning, modèles de charge, affectation des ressources, estimation du temps nécessaire, suivi des disponibilités et optimisation des priorités.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-title">Optimisation de fichiers existants</h3>
+                        <p class="service-text">Refonte de fichiers Excel complexes, fiabilisation des données, réduction des doubles saisies, amélioration de la lisibilité, des performances et de la maintenabilité.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- VUE PROJETS (LISTE) -->
+        <div id="view-projets" class="view">
+            <section class="section container">
+                <div class="section-header">
+                    <h2 class="section-title">Projets & Études de cas</h2>
+                    <p class="section-subtitle">Découvrez plusieurs cas concrets d’outils créés pour automatiser, structurer et améliorer des processus opérationnels.</p>
+                </div>
+
+                <div class="projects-list">
+                    
+                    <div class="project-item" onclick="showView('view-project-tracking')">
+                        <span class="project-category">Dashboard & Reporting</span>
+                        <h3>Dashboard post-production</h3>
+                        <p>Transformation d'un fichier de suivi par tâches en base de données exploitable, avec TCD et dashboard dynamique.</p>
+                        <div class="project-tags">
+                            <span>VBA</span><span>Dashboards</span><span>Data Structuration</span>
+                        </div>
+                        <span class="project-item-arrow">→</span>
+                    </div>
+
+                    <div class="project-item" onclick="showView('view-project-vo')">
+                        <span class="project-category">Génération Documentaire</span>
+                        <h3>Automatisation de documents PDF</h3>
+                        <p>Création d'un outil générant automatiquement des documents administratifs personnalisés à partir de bases structurées.</p>
+                        <div class="project-tags">
+                            <span>Génération PDF</span><span>VBA</span><span>Centralisation</span>
+                        </div>
+                        <span class="project-item-arrow">→</span>
+                    </div>
+
+                    <div class="project-item" onclick="showView('view-project-pdt')">
+                        <span class="project-category">Automatisation Outlook</span>
+                        <h3>Envoi automatique d'emails personnalisés</h3>
+                        <p>Outil centralisant des destinataires pour générer et envoyer des emails Outlook avec pièces jointes spécifiques.</p>
+                        <div class="project-tags">
+                            <span>Intégration Outlook</span><span>VBA</span><span>Mailing</span>
+                        </div>
+                        <span class="project-item-arrow">→</span>
+                    </div>
+
+                    <div class="project-item" onclick="showView('view-project-production')">
+                        <span class="project-category">Time tracking & revenue reporting</span>
+                        <h3>Suivi de production et revenus</h3>
+                        <p>Système reliant le temps tracké via Microsoft Forms aux projets, avancement et revenus associés.</p>
+                        <div class="project-tags">
+                            <span>Microsoft Forms</span><span>Reporting</span><span>Suivi Financier</span>
+                        </div>
+                        <span class="project-item-arrow">→</span>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+
+        <!-- VUE PROJET : TRACKING -->
+        <div id="view-project-tracking" class="view">
+            <article class="container project-detail">
+                
+                <div class="project-content-narrow">
+                    <button class="back-btn" onclick="showView('view-projets')">
+                        ← Retour aux projets
+                    </button>
+                    
+                    <div class="project-header-top">
+                        <span class="project-category">Dashboard & Reporting</span>
+                        <h1 class="project-detail-title">Dashboard post-production : du tracking manuel au pilotage dynamique</h1>
+                        <p class="project-detail-hook">Transformation d'un fichier de suivi par tâches en base de données exploitable, avec tableaux croisés dynamiques et dashboard pour analyser la charge, la productivité et les temps restants.</p>
+                    </div>
+
+                    <div class="workflow">
+                        <div class="workflow-step">Tracking manuel</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Macro VBA</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Database normalisée</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">TCD</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Dashboard de pilotage</div>
+                    </div>
+
+                    <div class="editorial-content">
+                        <div class="editorial-block">
+                            <h4>1. Situation</h4>
+                            <p>L'équipe suivait ses tâches dans un tableau détaillé pratique pour le suivi quotidien mais difficile à exploiter pour l'analyse. Les informations étaient réparties par étapes, par personnes, par dates et par projets, ce qui rendait complexe l'identification des tâches les plus chronophages, des projets les plus demandants et des performances mensuelles individuelles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-section">
+                    <div class="solution-title">
+                        <h4>2. Solution</h4>
+                    </div>
+                    <div class="solution-body">
+                        <div class="solution-text">
+                            <p>J'ai créé une macro VBA capable de transformer automatiquement le tracking en base de données normalisée. Cette database alimente ensuite des tableaux croisés dynamiques et un dashboard permettant d'analyser les volumes, les temps, les projets, les tâches, les étapes de production et les performances par période, par collaborateur ou par projets.</p>
+                        </div>
+                        <div class="solution-thumbnails">
+                            <div class="gallery-item thumb">
+                                <img src="assets/tracking-01-initial.png" alt="Vue globale du tracking initial" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">Fichier de tracking initial.</div>
+                            </div>
+                            <div class="gallery-item thumb">
+                                <img src="assets/tracking-03-database.png" alt="Base de données générée automatiquement" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">Base de données générée par macro.</div>
+                            </div>
+                            <div class="gallery-item thumb">
+                                <img src="assets/tracking-07-tcd.png" alt="Tableaux croisés dynamiques" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">TCD d'analyse.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-solution-main-shot">
+                    <div class="gallery-item">
+                        <img src="assets/tracking-05-dashboard.png" alt="Dashboard final de productivité" loading="lazy" onclick="openLightbox(this.src)">
+                        <div class="gallery-item-caption">Dashboard final de productivité et d'analyse de la charge.</div>
+                    </div>
+                </div>
+
+                <div class="project-content-narrow">
+                    <div class="editorial-content">
+                        <div class="editorial-block result">
+                            <h4>3. Résultat</h4>
+                            <p>Sans ajouter de saisie supplémentaire pour l’équipe, l’outil transforme les données existantes en indicateurs exploitables. L'équipe dispose d'un outil clair pour comprendre où le temps est passé, anticiper la charge restante, comparer les performances et mieux répartir les tâches selon les profils et les besoins.</p>
+                        </div>
+                    </div>
+
+                    <span class="privacy-note">Les données visibles dans ces captures sont anonymisées ou fictives.</span>
+                </div>
+
+            </article>
+        </div>
+
+        <!-- VUE PROJET : VO TRACKER -->
+        <div id="view-project-vo" class="view">
+            <article class="container project-detail">
+                
+                <div class="project-content-narrow">
+                    <button class="back-btn" onclick="showView('view-projets')">
+                        ← Retour aux projets
+                    </button>
+                    
+                    <div class="project-header-top">
+                        <span class="project-category">Génération Documentaire</span>
+                        <h1 class="project-detail-title">Automatisation de documents administratifs personnalisés en PDF</h1>
+                        <p class="project-detail-hook">Création d'un outil Excel/VBA permettant de générer automatiquement des documents administratifs personnalisés à partir de bases de données internes et de templates préremplis.</p>
+                    </div>
+
+                    <div class="workflow">
+                        <div class="workflow-step">Saisie progressive</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Bases structurées</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Base centrale</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Templates remplis</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">PDF générés</div>
+                    </div>
+
+                    <div class="editorial-content">
+                        <div class="editorial-block">
+                            <h4>1. Situation</h4>
+                            <p>Les équipes administratives doivent souvent produire un grand volume de documents personnalisés contenant des informations récurrentes. Lorsque ces documents sont remplis manuellement, le processus devient chronophage et augmente les risques d'erreurs, de doubles saisies, d'oublis ou d'incohérences entre les fichiers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-section">
+                    <div class="solution-title">
+                        <h4>2. Solution</h4>
+                    </div>
+                    <div class="solution-body">
+                        <div class="solution-text">
+                            <p>J'ai mis en place un processus d'alimentation progressive de plusieurs bases de données structurées (RH, projets, tarifs) afin de centraliser les informations nécessaires. L'utilisateur sélectionne les lignes dans la base, clique sur un bouton, et les macros VBA remplissent automatiquement les templates et exportent en PDF.</p>
+                        </div>
+                        <div class="solution-thumbnails">
+                            <div class="gallery-item thumb">
+                                <img src="assets/vo-01-database-buttons.png" alt="Base de données centrale avec boutons" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">Base de données centrale permettant de sélectionner les lignes à exporter.</div>
+                            </div>
+                            <div class="gallery-item thumb">
+                                <img src="assets/vo-03-pdf-folder.png" alt="Dossier contenant les PDF générés" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">Export final des PDF triés et renommés dans un dossier cible.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-solution-main-shot">
+                    <div class="gallery-item">
+                        <img src="assets/vo-02-template.png" alt="Template automatiquement rempli" loading="lazy" onclick="openLightbox(this.src)">
+                        <div class="gallery-item-caption">Modèle de document pré-rempli automatiquement avec les bonnes données.</div>
+                    </div>
+                </div>
+
+                <div class="project-content-narrow">
+                    <div class="editorial-content">
+                        <div class="editorial-block result">
+                            <h4>3. Résultat</h4>
+                            <p>Le processus administratif est centralisé, plus rapide et plus fiable. Les équipes réduisent les saisies répétitives, limitent les erreurs et peuvent produire un grand volume de documents personnalisés en quelques clics.</p>
+                        </div>
+                    </div>
+
+                    <span class="privacy-note">Les données visibles dans ces captures sont anonymisées ou fictives.</span>
+                </div>
+
+            </article>
+        </div>
+
+        <!-- VUE PROJET : PDT -->
+        <div id="view-project-pdt" class="view">
+            <article class="container project-detail">
+                
+                <div class="project-content-narrow">
+                    <button class="back-btn" onclick="showView('view-projets')">
+                        ← Retour aux projets
+                    </button>
+                    
+                    <div class="project-header-top">
+                        <span class="project-category">Automatisation Outlook</span>
+                        <h1 class="project-detail-title">Génération et envoi automatique d'emails personnalisés</h1>
+                        <p class="project-detail-hook">Automatisation de la préparation et de l'envoi d'emails personnalisés à partir d'un fichier Excel contenant une liste de destinataires, leurs informations spécifiques et les pièces jointes associées.</p>
+                    </div>
+
+                    <div class="workflow">
+                        <div class="workflow-step">Infos projet</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Liste destinataires</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Modèles personnalisés</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Macro VBA</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Emails envoyés</div>
+                    </div>
+
+                    <div class="editorial-content">
+                        <div class="editorial-block">
+                            <h4>1. Situation</h4>
+                            <p>La préparation manuelle d'emails personnalisés devient rapidement chronophage lorsque chaque destinataire doit recevoir des informations différentes. Plus le volume de destinataires augmente, plus le risque d'erreur, d'oubli ou de copier-coller incorrect devient important.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-section">
+                    <div class="solution-title">
+                        <h4>2. Solution</h4>
+                    </div>
+                    <div class="solution-body">
+                        <div class="solution-text">
+                            <p>J'ai conçu un outil Excel/VBA qui centralise les informations communes du projet, associe chaque destinataire à ses données spécifiques, génère automatiquement le contenu personnalisé du message, ajoute les pièces jointes nécessaires et déclenche l'envoi via Outlook.</p>
+                        </div>
+                        <div class="solution-thumbnails">
+                            <div class="gallery-item thumb">
+                                <img src="assets/pdt-01-infos.png" alt="Informations communes du projet" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">Informations générales du projet.</div>
+                            </div>
+                            <div class="gallery-item thumb">
+                                <img src="assets/pdt-02-destinataires.png" alt="Liste des destinataires" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">Liste structurée des destinataires.</div>
+                            </div>
+                            <div class="gallery-item thumb">
+                                <img src="assets/pdt-05-outlook-sent.png" alt="Résultat final dans Outlook" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">Vérification de l'envoi dans Outlook.</div>
+                            </div>
+                            <div class="gallery-item thumb">
+                                <img src="assets/pdt-04-vba.png" alt="Code VBA" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">Aperçu du script VBA orchestrant l'envoi.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-solution-main-shot">
+                    <div class="gallery-item">
+                        <img src="assets/pdt-03-preview.png" alt="Prévisualisation des emails" loading="lazy" onclick="openLightbox(this.src)">
+                        <div class="gallery-item-caption">Interface de prévisualisation avant envoi.</div>
+                    </div>
+                </div>
+
+                <div class="project-content-narrow">
+                    <div class="editorial-content">
+                        <div class="editorial-block result">
+                            <h4>3. Résultat</h4>
+                            <p>L'envoi devient beaucoup plus rapide, homogène et fiable. L'équipe réduit fortement les manipulations manuelles, limite les risques d'erreur et gagne un temps significatif dès que le nombre de destinataires augmente.</p>
+                        </div>
+                    </div>
+
+                    <span class="privacy-note">Les données visibles dans ces captures sont anonymisées ou fictives.</span>
+                </div>
+
+            </article>
+        </div>
+
+        <!-- VUE PROJET : PRODUCTION -->
+        <div id="view-project-production" class="view">
+            <article class="container project-detail">
+                
+                <div class="project-content-narrow">
+                    <button class="back-btn" onclick="showView('view-projets')">
+                        ← Retour aux projets
+                    </button>
+                    
+                    <div class="project-header-top">
+                        <span class="project-category">Time tracking & revenue reporting</span>
+                        <h1 class="project-detail-title">Time tracking, suivi de production et revenue reporting</h1>
+                        <p class="project-detail-hook">Contribution à un outil Excel/VBA permettant de relier le temps tracké par les employés aux projets, aux tâches facturées, à l'avancement de production et aux revenus associés.</p>
+                    </div>
+
+                    <div class="workflow">
+                        <div class="workflow-step">Microsoft Forms</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Base temps</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Excel/VBA</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Suivi projets</div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">Revenus</div>
+                    </div>
+
+                    <div class="editorial-content">
+                        <div class="editorial-block">
+                            <h4>1. Situation</h4>
+                            <p>La direction avait besoin de suivre précisément le temps passé par projet, par tâche facturable et par employé, puis de comparer ces données avec les heures vendues. Sans système structuré, il devient difficile de savoir si l'avancement réel correspond au budget, ce qui masque les risques opérationnels et financiers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-section">
+                    <div class="solution-title">
+                        <h4>2. Solution</h4>
+                    </div>
+                    <div class="solution-body">
+                        <div class="solution-text">
+                            <p>Le système permet aux employés de renseigner leur temps via Microsoft Forms. Ces données alimentent ensuite une base centralisée, utilisée dans Excel/VBA pour relier les temps déclarés aux projets, aux catégories facturables, aux taux horaires, aux heures vendues, aux heures restantes et aux revenus générés.</p>
+                        </div>
+                        <div class="solution-thumbnails">
+                            <div class="gallery-item thumb">
+                                <img src="assets/production-01-forms.png" alt="Formulaire Microsoft Forms" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">Formulaire de saisie rapide pour les équipes (Microsoft Forms).</div>
+                            </div>
+                            <div class="gallery-item thumb">
+                                <img src="assets/production-02-database.png" alt="Base de données temps consolidée" loading="lazy" onclick="openLightbox(this.src)">
+                                <div class="gallery-item-caption">Consolidation automatique des temps dans une base de données Excel.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-solution-main-shot">
+                    <div class="gallery-item">
+                        <img src="assets/production-03-revenue-dashboard.png" alt="Tableau de pilotage" loading="lazy" onclick="openLightbox(this.src)">
+                        <div class="gallery-item-caption">Tableau de pilotage croisant les temps passés et les revenus associés.</div>
+                    </div>
+                </div>
+
+                <div class="project-content-narrow">
+                    <div class="editorial-content">
+                        <div class="editorial-block result">
+                            <h4>3. Résultat</h4>
+                            <p>L'outil donne une meilleure visibilité sur l'avancement réel des projets, la consommation des heures vendues, les revenus associés et les écarts potentiels. Il permet à l'équipe de mieux piloter la production, d'identifier les projets à risque et de suivre la rentabilité de manière continue.</p>
+                        </div>
+                    </div>
+
+                    <span class="privacy-note">Les données visibles dans ces captures sont anonymisées ou fictives.</span>
+                </div>
+
+            </article>
+        </div>
+
+
+        <!-- VUE MÉTHODE -->
+        <div id="view-methode" class="view">
+            <section class="section container">
+                <div class="section-header">
+                    <h2 class="section-title">Méthode de travail</h2>
+                    <p class="section-subtitle">Une approche structurée pour garantir la construction d'outils durables, adoptés par vos équipes.</p>
+                </div>
+
+                <div class="timeline-vertical">
+                    <div class="timeline-v-item">
+                        <div class="timeline-v-point"></div>
+                        <div class="timeline-v-content">
+                            <span class="timeline-v-step">01</span>
+                            <h3>Comprendre</h3>
+                            <p>Analyse du fichier existant, du processus métier et des irritants pour identifier les véritables points d'optimisation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-v-item">
+                        <div class="timeline-v-point"></div>
+                        <div class="timeline-v-content">
+                            <span class="timeline-v-step">02</span>
+                            <h3>Structurer</h3>
+                            <p>Organisation des sources, nettoyage, normalisation et fiabilisation des bases de données avant toute automatisation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-v-item">
+                        <div class="timeline-v-point"></div>
+                        <div class="timeline-v-content">
+                            <span class="timeline-v-step">03</span>
+                            <h3>Concevoir</h3>
+                            <p>Définition de l’architecture Excel, des feuilles de calcul, des interfaces (boutons, dashboards) et des modèles de documents.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-v-item">
+                        <div class="timeline-v-point"></div>
+                        <div class="timeline-v-content">
+                            <span class="timeline-v-step">04</span>
+                            <h3>Automatiser</h3>
+                            <p>Codage des macros, mise en place des algorithmes de traitement, génération de rapports et intégrations avec la suite Office.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-v-item">
+                        <div class="timeline-v-point"></div>
+                        <div class="timeline-v-content">
+                            <span class="timeline-v-step">05</span>
+                            <h3>Tester</h3>
+                            <p>Vérification rigoureuse des résultats, gestion des cas particuliers et amélioration de l’ergonomie de l'outil avec l'utilisateur.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-v-item">
+                        <div class="timeline-v-point"></div>
+                        <div class="timeline-v-content">
+                            <span class="timeline-v-step">06</span>
+                            <h3>Livrer</h3>
+                            <p>Rédaction d'une documentation légère, transfert de compétences à l’équipe et mise en place d'une structure facilement maintenable.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- VUE À PROPOS -->
+        <div id="view-apropos" class="view">
+            <section class="section container">
+                <div class="section-header">
+                    <h2 class="section-title">À propos</h2>
+                    <p class="section-subtitle">Profil et compétences</p>
+                </div>
+                
+                <div class="apropos-content">
+                    <p>
+                        Chef de projet orienté optimisation, performance et données, j’ai développé une forte expertise dans l’optimisation de processus opérationnels. Mon parcours m’a amené à automatiser des tâches administratives, structurer des bases de données, créer des dashboards KPI et fiabiliser des workflows de production.
+                    </p>
+                    <p>
+                        Je combine compréhension métier, logique data et développement d’outils pour créer des solutions simples à utiliser et solides sur le long terme.
+                    </p>
+                    <div class="project-tags" style="margin-top: 40px;">
+                        <span>Excel avancé</span>
+                        <span>VBA</span>
+                        <span>Power Query</span>
+                        <span>Power Automate</span>
+                        <span>Power BI — en cours d'intégration</span>
+                        <span>Dashboards</span>
+                        <span>KPI</span>
+                        <span>Reporting</span>
+                        <span>Automatisation</span>
+                        <span>Optimisation de processus</span>
+                        <span>Planification intelligente</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- VUE CONTACT -->
+        <div id="view-contact" class="view">
+            <section class="section container">
+                <div class="section-header" style="text-align: left; max-width: 600px;">
+                    <h2 class="section-title">Me contacter</h2>
+                    <p class="section-subtitle" style="margin-bottom: 32px; font-size: 1.125rem;">
+                        Vous avez un fichier, un suivi ou un processus devenu trop manuel, trop lent ou trop complexe ? Décrivez-moi votre besoin, votre fichier ou votre idée d’automatisation. Je vous répondrai avec une première analyse et une proposition d’approche.
+                    </p>
+                    <a href="mailto:alexandre.mugular@gmail.com" class="btn btn-primary btn-lg" style="margin-bottom: 48px;">Me contacter par email</a>
+
+                    <div class="contact-info" style="align-items: flex-start; gap: 16px; margin: 0;">
+                        <div class="contact-item">
+                            <a href="mailto:alexandre.mugular@gmail.com">alexandre.mugular@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="tel:+33622012542">+33 6 22 01 25 42</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content text-center">
+            <p>&copy; 2026 Alexandre Mugular. Tous droits réservés.</p>
+            <p>Les données visibles dans les captures du portfolio sont anonymisées ou fictives.</p>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Image agrandie">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
