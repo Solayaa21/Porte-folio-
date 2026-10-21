@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning studio sans double saisie | Alexandre Mugular</title>
+    <meta name="description" content="Les plannings des studios alimentent automatiquement une base SharePoint, et une application Power Apps permet de consulter, réserver et exporter les heures sans rien ressaisir.">
+    <link rel="canonical" href="https://alexandremugular.fr/projets/planning-studio.html">
+    <link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects/studio-planning.html">
+    <meta name="theme-color" content="#0B1110">
+    <meta property="og:image" content="https://alexandremugular.fr/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1110'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%232DD4BF' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+    <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html" aria-label="Alexandre Mugular, accueil"><span class="logo-full">Alexandre Mugular</span><span class="logo-short" aria-hidden="true">AM</span></a>
+            <nav class="nav" aria-label="Navigation principale">
+                <a href="../index.html">Accueil</a>
+                <a href="../projets.html" aria-current="page">Projets</a>
+                <a href="../a-propos.html">À propos</a>
+                <a href="../contact.html" class="btn btn-primary btn-sm">Contact</a>
+                <a class="lang" href="../en/projects/studio-planning.html" hreflang="en" lang="en">EN</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenu" class="page">
+        <div class="container">
+            <a class="crumb" href="../projets.html"><span aria-hidden="true">←</span> Tous les projets</a>
+
+            <header class="project-head">
+                <p class="project-context">Studio de localisation de jeux vidéo, Paris · 2026</p>
+                <h1>Planning studio sans double saisie</h1>
+                <p class="summary">Les plannings des studios alimentent automatiquement une base SharePoint, et une application Power Apps sur mesure permet aux chefs de projet de consulter, réserver et exporter les heures, sans rien ressaisir.</p>
+            </header>
+
+            <ol class="circuit shot-main" aria-label="Le circuit">
+                <li><strong>Plannings Excel en ligne</strong><span>Les équipes réservent les studios dans leurs plannings habituels. Rien ne change pour elles.</span></li>
+                <li><strong>Power Automate</strong><span>Une synchronisation recopie les réservations dans une liste SharePoint, à l'identique.</span></li>
+                <li><strong>Liste SharePoint</strong><span>Une base unique des séances : studio, projet, comédien, équipe, horaires, statut.</span></li>
+                <li><strong>Power Apps</strong><span>L'application de planning des chefs de projet : vues par jour et par semaine, détail d'une séance, ajout manuel.</span></li>
+                <li class="is-final"><strong>Export des heures</strong><span>Un classeur Excel prêt à facturer, généré en un clic par Power Automate et un Office Script.</span></li>
+            </ol>
+
+            <section class="brief" aria-label="En bref">
+                <div>
+                    <h2>Le besoin</h2>
+                    <p>Les réservations de studio vivaient dans des plannings Excel en ligne. Pour savoir qui enregistrait quoi, et combien d'heures facturer, il fallait tout recopier à la main.</p>
+                </div>
+                <div>
+                    <h2>Ce que j'ai mis en place</h2>
+                    <p>Une synchronisation automatique des plannings vers une liste SharePoint, une application Power Apps pensée pour le métier, et un export des heures par directeur artistique, ingénieur du son ou projet.</p>
+                </div>
+                <div>
+                    <h2>Ce que ça change</h2>
+                    <p>Une seule saisie, dans l'outil que les équipes connaissent déjà. Les heures sont prêtes à facturer, et la même base alimente le tableau de bord de production.</p>
+                </div>
+            </section>
+
+            <details class="detail">
+                <summary>L'application</summary>
+                <div class="detail-body">
+                    <ul class="facts">
+                        <li><strong>Planning des cinq studios</strong> par jour et par semaine, en couleurs par projet ou par statut.</li>
+                        <li><strong>Quatre indicateurs</strong> sur la période affichée : heures réservées, projets, directeurs artistiques et ingénieurs du son mobilisés.</li>
+                        <li><strong>Détail d'une séance</strong> : projet, studio, comédien, personnages, équipe, horaires et notes.</li>
+                        <li><strong>Ajout manuel</strong> d'une séance hors planning, avec alerte en cas de conflit, et saisie des absences de l'équipe.</li>
+                        <li><strong>Accès direct</strong> au tableau de bord de production depuis l'application.</li>
+                        <li><strong>Export des heures</strong> : mois en cours, mois précédent ou dates au choix, filtré par projet ou par studio. Seules les réservations confirmées comptent.</li>
+                        <li><strong>Deux versions</strong> de l'application : une pour les chefs de projet, une pour les directeurs artistiques.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="detail">
+                <summary>Les choix qui la rendent fiable</summary>
+                <div class="detail-body">
+                    <ul class="facts">
+                        <li><strong>La liste reste le miroir exact des plannings</strong> : une réservation supprimée disparaît aussi de la base. Les saisies manuelles et les jours fériés sont gérés à part.</li>
+                        <li><strong>Sauvegarde quotidienne</strong> des listes, conservée dans SharePoint.</li>
+                        <li><strong>SharePoint plutôt qu'une base plus lourde</strong>, tant que les volumes le permettent : moins de licences et de maintenance.</li>
+                        <li><strong>Des propriétaires internes</strong> pour chaque application et chaque flux, pour que tout continue de tourner sans moi.</li>
+                        <li><strong>Des tests</strong> sur la logique d'export (statuts, dates, chevauchements, rôles multiples) avant la mise en production.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="detail">
+                <summary>Outils</summary>
+                <div class="detail-body">
+                    <ul class="chips"><li>Power Apps</li><li>Power Automate</li><li>SharePoint</li><li>Office Scripts</li><li>Excel en ligne</li><li>Power BI</li></ul>
+                </div>
+            </details>
+
+            <div class="project-foot">
+                <a href="suivi-de-production.html"><span aria-hidden="true">←</span> Projet précédent : Suivi de production</a>
+                <a href="paie-comediens.html">Projet suivant : Paie des comédiens <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© <span data-year>2026</span> Alexandre Mugular · <a href="../mentions-legales.html">Mentions légales</a></p>
+            <p><a href="mailto:contact@alexandremugular.fr">contact@alexandremugular.fr</a></p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

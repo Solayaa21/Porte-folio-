@@ -1,71 +1,75 @@
-// Logic for Strict Single Page App views
-function showView(viewId) {
-    // Hide all views
-    const views = document.querySelectorAll('.view');
-    views.forEach(view => {
-        view.classList.remove('active');
+// Pipeline: one step open at a time, a second click closes it
+const stations = document.querySelectorAll('.station');
+
+const toggleStation = (station, scroll) => {
+    const wasOpen = station.getAttribute('aria-expanded') === 'true';
+
+    stations.forEach(other => {
+        other.setAttribute('aria-expanded', 'false');
+        document.getElementById(other.getAttribute('aria-controls')).classList.remove('is-open');
     });
 
-    // Show target view
-    const targetView = document.getElementById(viewId);
-    if (targetView) {
-        targetView.classList.add('active');
+    if (!wasOpen) {
+        const panel = document.getElementById(station.getAttribute('aria-controls'));
+        station.setAttribute('aria-expanded', 'true');
+        panel.classList.add('is-open');
+        if (scroll) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
+};
 
-    // Always scroll to top when changing views
-    window.scrollTo(0, 0);
-
-    // Update active nav link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        // Match the onclick attribute to set active state (simplified)
-        if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(viewId)) {
-            link.classList.add('active');
-        }
-    });
-    
-    // Close mobile menu if open
-    const nav = document.querySelector('.nav');
-    if (nav.classList.contains('active')) {
-        nav.classList.remove('active');
-    }
-}
-
-// Mobile menu toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
-
-if (menuToggle && nav) {
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
-}
-
-// Lightbox logic
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeBtn = document.querySelector('.lightbox-close');
-
-function openLightbox(src) {
-    lightboxImg.src = src;
-    lightbox.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Prevent scrolling
-}
-
-function closeLightbox() {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-    document.body.style.overflow = 'auto'; // Restore scrolling
-}
-
-if (closeBtn) {
-    closeBtn.addEventListener('click', closeLightbox);
-}
-
-// Close lightbox on escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox.style.display === 'flex') {
-        closeLightbox();
-    }
+stations.forEach(station => {
+    station.addEventListener('click', () => toggleStation(station, window.matchMedia('(max-width: 900px)').matches));
 });
+
+// A link such as index.html#etape-2 opens that step
+const linked = location.hash && document.querySelector(`.station[aria-controls="${location.hash.slice(1)}"]`);
+if (linked) toggleStation(linked, true);
+
+// Blocks fade in when they enter the screen
+const revealed = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    revealed.forEach(el => observer.observe(el));
+} else {
+    revealed.forEach(el => el.classList.add('is-visible'));
+}
+
+// Lightbox: any element with data-full opens the full-size capture
+const lightbox = document.getElementById('lightbox');
+
+if (lightbox) {
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    let opener = null;
+
+    const close = () => {
+        lightbox.hidden = true;
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+        if (opener) opener.focus();
+    };
+
+    document.querySelectorAll('[data-full]').forEach(el => {
+        el.addEventListener('click', () => {
+            opener = el;
+            lightboxImg.src = el.dataset.full;
+            lightbox.hidden = false;
+            document.body.style.overflow = 'hidden';
+            closeBtn.focus();
+        });
+    });
+
+    closeBtn.addEventListener('click', close);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !lightbox.hidden) close(); });
+}
+
+// Footer year
+document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });

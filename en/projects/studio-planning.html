@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio scheduling without double entry | Alexandre Mugular</title>
+    <meta name="description" content="Studio schedules feed a SharePoint database automatically, and a Power Apps app lets project managers view, book and export hours with no re-entry.">
+    <link rel="canonical" href="https://alexandremugular.fr/en/projects/studio-planning.html">
+    <link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/projets/planning-studio.html">
+    <meta name="theme-color" content="#0B1110">
+    <meta property="og:image" content="https://alexandremugular.fr/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1110'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%232DD4BF' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+    <link rel="preload" href="../../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <a class="skip-link" href="#contenu">Skip to content</a>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html" aria-label="Alexandre Mugular, home"><span class="logo-full">Alexandre Mugular</span><span class="logo-short" aria-hidden="true">AM</span></a>
+            <nav class="nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../projects.html" aria-current="page">Projects</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html" class="btn btn-primary btn-sm">Contact</a>
+                <a class="lang" href="../../projets/planning-studio.html" hreflang="fr" lang="fr">FR</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenu" class="page">
+        <div class="container">
+            <a class="crumb" href="../projects.html"><span aria-hidden="true">←</span> All projects</a>
+
+            <header class="project-head">
+                <p class="project-context">Video game localization studio, Paris · 2026</p>
+                <h1>Studio scheduling without double entry</h1>
+                <p class="summary">Studio schedules feed a SharePoint database automatically, and a custom Power Apps app lets project managers view, book and export hours, with nothing to re-enter.</p>
+            </header>
+
+            <ol class="circuit shot-main" aria-label="The workflow">
+                <li><strong>Excel Online schedules</strong><span>Teams book the studios in their usual schedules. Nothing changes for them.</span></li>
+                <li><strong>Power Automate</strong><span>A sync copies the bookings into a SharePoint list, exactly as they are.</span></li>
+                <li><strong>SharePoint list</strong><span>One database of sessions: studio, project, voice actor, team, times, status.</span></li>
+                <li><strong>Power Apps</strong><span>The project managers' scheduling app: day and week views, session details, manual entries.</span></li>
+                <li class="is-final"><strong>Hours export</strong><span>An Excel workbook ready to invoice, generated in one click by Power Automate and an Office Script.</span></li>
+            </ol>
+
+            <section class="brief" aria-label="In short">
+                <div>
+                    <h2>The need</h2>
+                    <p>Studio bookings lived in Excel Online schedules. To know who was recording what, and how many hours to invoice, everything had to be copied by hand.</p>
+                </div>
+                <div>
+                    <h2>What I built</h2>
+                    <p>An automatic sync from the schedules to a SharePoint list, a Power Apps app designed around the business, and an export of hours per voice director, sound engineer or project.</p>
+                </div>
+                <div>
+                    <h2>What it changes</h2>
+                    <p>One single entry, in the tool the teams already know. Hours are ready to invoice, and the same database feeds the production dashboard.</p>
+                </div>
+            </section>
+
+            <details class="detail">
+                <summary>The app</summary>
+                <div class="detail-body">
+                    <ul class="facts">
+                        <li><strong>Schedule of the five studios</strong> by day and by week, colored by project or by status.</li>
+                        <li><strong>Four indicators</strong> for the period shown: booked hours, projects, voice directors and sound engineers involved.</li>
+                        <li><strong>Session details</strong>: project, studio, voice actor, characters, team, times and notes.</li>
+                        <li><strong>Manual entry</strong> of a session outside the schedules, with a conflict warning, plus team absences.</li>
+                        <li><strong>Direct access</strong> to the production dashboard from the app.</li>
+                        <li><strong>Hours export</strong>: current month, previous month or custom dates, filtered by project or studio. Only confirmed bookings count.</li>
+                        <li><strong>Two versions</strong> of the app: one for project managers, one for voice directors.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="detail">
+                <summary>What makes it reliable</summary>
+                <div class="detail-body">
+                    <ul class="facts">
+                        <li><strong>The list stays an exact mirror of the schedules</strong>: a deleted booking also disappears from the database. Manual entries and public holidays are handled separately.</li>
+                        <li><strong>Daily backup</strong> of the lists, kept in SharePoint.</li>
+                        <li><strong>SharePoint rather than a heavier database</strong>, as long as volumes allow it: fewer licenses and less maintenance.</li>
+                        <li><strong>Internal owners</strong> for every app and every flow, so everything keeps running without me.</li>
+                        <li><strong>Tests</strong> on the export logic (statuses, dates, overlaps, multiple roles) before going live.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="detail">
+                <summary>Tools</summary>
+                <div class="detail-body">
+                    <ul class="chips"><li>Power Apps</li><li>Power Automate</li><li>SharePoint</li><li>Office Scripts</li><li>Excel Online</li><li>Power BI</li></ul>
+                </div>
+            </details>
+
+            <div class="project-foot">
+                <a href="production-tracking.html"><span aria-hidden="true">←</span> Previous project: Production tracking</a>
+                <a href="actor-payroll.html">Next project: Actor payroll <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© <span data-year>2026</span> Alexandre Mugular · <a href="../legal-notice.html">Legal notice</a></p>
+            <p><a href="mailto:contact@alexandremugular.fr">contact@alexandremugular.fr</a></p>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

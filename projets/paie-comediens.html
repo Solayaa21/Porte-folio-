@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paie et contrats des comédiens | Alexandre Mugular</title>
+    <meta name="description" content="Un outil Excel qui transforme le planning des séances en cachets, taxes, contrats et remises prêts à envoyer, refondu en 2026.">
+    <link rel="canonical" href="https://alexandremugular.fr/projets/paie-comediens.html">
+    <link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects/actor-payroll.html">
+    <meta name="theme-color" content="#0B1110">
+    <meta property="og:image" content="https://alexandremugular.fr/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1110'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%232DD4BF' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+    <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html" aria-label="Alexandre Mugular, accueil"><span class="logo-full">Alexandre Mugular</span><span class="logo-short" aria-hidden="true">AM</span></a>
+            <nav class="nav" aria-label="Navigation principale">
+                <a href="../index.html">Accueil</a>
+                <a href="../projets.html" aria-current="page">Projets</a>
+                <a href="../a-propos.html">À propos</a>
+                <a href="../contact.html" class="btn btn-primary btn-sm">Contact</a>
+                <a class="lang" href="../en/projects/actor-payroll.html" hreflang="en" lang="en">EN</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenu" class="page">
+        <div class="container">
+            <a class="crumb" href="../projets.html"><span aria-hidden="true">←</span> Tous les projets</a>
+
+            <header class="project-head">
+                <p class="project-context">Studio de doublage, Montréal · 2025 à 2026</p>
+                <h1>Paie et contrats des comédiens</h1>
+                <p class="summary">Un outil Excel qui transforme le planning des séances d'enregistrement en cachets, taxes, contrats et remises prêts à envoyer. Refondu en 2026 pour être plus simple et plus fiable.</p>
+            </header>
+
+            <figure class="shot shot-main">
+                <button type="button" data-full="../assets/projets/paie-recordings.webp" aria-label="Agrandir la feuille des séances">
+                    <img src="../assets/projets/paie-recordings.webp" alt="Feuille des séances : statut de chaque ligne, cachets, taxes, montant à payer et boutons de génération des documents" width="1800" height="570">
+                </button>
+                <figcaption>La feuille des séances et ses boutons de génération, sur des données fictives.</figcaption>
+            </figure>
+
+            <section class="brief" aria-label="En bref">
+                <div>
+                    <h2>Le besoin</h2>
+                    <p>Chaque séance d'enregistrement donne lieu à un cachet calculé selon la convention syndicale, à des taxes, à un contrat et à une remise. Fait à la main, c'était long et source d'erreurs.</p>
+                </div>
+                <div>
+                    <h2>Ce que j'ai mis en place</h2>
+                    <p>L'import du planning des séances, le calcul automatique des cachets et des taxes selon l'union et le projet, un statut par ligne qui dit ce qui manque, et la génération des documents en un clic.</p>
+                </div>
+                <div>
+                    <h2>Ce que ça change</h2>
+                    <p>L'administration suit chaque séance jusqu'au paiement, sans ressaisie, et voit immédiatement ce qui bloque un document : un numéro d'assurance sociale ou un numéro d'union manquant.</p>
+                </div>
+            </section>
+
+            <details class="detail">
+                <summary>Le circuit, étape par étape</summary>
+                <div class="detail-body">
+                    <ol class="circuit">
+                        <li><strong>Import du planning</strong><span>Les séances arrivent du planning du studio. Le journal du dernier import dit ce qui a été ajouté ou modifié.</span></li>
+                        <li><strong>Calcul</strong><span>Cachets, sous-totaux et taxes selon l'union, le rôle et les tarifs du projet.</span></li>
+                        <li><strong>Contrôle</strong><span>Chaque ligne reçoit un statut : prête, ou ce qu'il reste à compléter.</span></li>
+                        <li class="is-final"><strong>Documents</strong><span>Contrats, remises aux unions et feuilles de temps générés pour les lignes prêtes.</span></li>
+                    </ol>
+                </div>
+            </details>
+
+            <details class="detail">
+                <summary>Les écrans</summary>
+                <div class="detail-body">
+                    <div class="gallery">
+                        <figure class="shot">
+                            <button type="button" data-full="../assets/projets/paie-import.webp" aria-label="Agrandir le journal du dernier import"><img src="../assets/projets/paie-import.webp" alt="Journal du dernier import : séances ajoutées avec projet, personne et horaires" loading="lazy" width="1800" height="595"></button>
+                            <figcaption>Le journal du dernier import : ce qui a changé dans le planning.</figcaption>
+                        </figure>
+                        <figure class="shot">
+                            <button type="button" data-full="../assets/projets/paie-projets.webp" aria-label="Agrandir la liste des projets"><img src="../assets/projets/paie-projets.webp" alt="Liste des projets : client, union, tarifs et ententes" loading="lazy" width="1800" height="756"></button>
+                            <figcaption>Une ligne par projet : l'union et les tarifs servent au calcul des cachets.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </details>
+
+            <details class="detail">
+                <summary>Sous le capot</summary>
+                <div class="detail-body">
+                    <ul class="facts">
+                        <li><strong>Trois bases reliées</strong> : les séances, les projets et leurs tarifs, et les comédiens avec leurs informations de paiement.</li>
+                        <li><strong>Une table d'alias</strong> réconcilie les noms écrits différemment dans le planning.</li>
+                        <li><strong>Formules Excel 365</strong> (LET, XLOOKUP) pour les calculs, et VBA pour l'import et la génération des documents.</li>
+                        <li><strong>Règles métier visibles</strong> : première venue d'un comédien, tarif spécial, montant forcé, chacun dans sa colonne.</li>
+                        <li><strong>Refonte en 2026</strong> d'une première version : moins d'onglets, un import qui explique ses changements, des statuts lisibles.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="detail">
+                <summary>Outils</summary>
+                <div class="detail-body">
+                    <ul class="chips"><li>Excel 365</li><li>VBA</li><li>Tableaux structurés</li><li>Mise en forme conditionnelle</li></ul>
+                </div>
+            </details>
+
+            <div class="project-foot">
+                <a href="planning-studio.html"><span aria-hidden="true">←</span> Projet précédent : Planning studio</a>
+                <a href="../projets.html">Tous les projets <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© <span data-year>2026</span> Alexandre Mugular · <a href="../mentions-legales.html">Mentions légales</a></p>
+            <p><a href="mailto:contact@alexandremugular.fr">contact@alexandremugular.fr</a></p>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Capture agrandie" hidden>
+        <button class="lightbox-close" type="button" aria-label="Fermer">×</button>
+        <img alt="">
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
