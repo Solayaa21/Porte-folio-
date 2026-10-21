@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://alexandremugular.fr/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/projets.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/projets.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/en/projects.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/projets.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/projets/suivi-de-production.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/projets/suivi-de-production.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects/production-tracking.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/en/projects/production-tracking.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/projets/suivi-de-production.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects/production-tracking.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/projets/planning-studio.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/projets/planning-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects/studio-planning.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/en/projects/studio-planning.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/projets/planning-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects/studio-planning.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/projets/paie-comediens.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/projets/paie-comediens.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects/actor-payroll.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/en/projects/actor-payroll.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/projets/paie-comediens.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects/actor-payroll.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/a-propos.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/a-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/about.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/en/about.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/a-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/about.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/contact.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/contact.html"/>
+  </url>
+  <url>
+    <loc>https://alexandremugular.fr/en/contact.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/contact.html"/>
+  </url>
+</urlset>
