@@ -111,7 +111,7 @@ button { font: inherit; color: inherit; }
 .hero-title { font-size: clamp(2.1rem, 4.6vw, 3.6rem); white-space: nowrap; margin-bottom: 22px; }
 .grad { background: linear-gradient(90deg, #5EEAD4, var(--accent) 45%, #22D3EE); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .lead span { display: block; }
-.lead-1 { font-size: 1.15rem; color: var(--text); font-weight: 500; margin-bottom: 8px; }
+.lead-1 { font-size: 1.15rem; color: var(--text); font-weight: 500; margin-bottom: 8px; text-wrap: balance; }
 .lead-2 { font-size: 1.05rem; color: var(--text-secondary); max-width: 1000px; margin: 0 auto; text-wrap: balance; }
 .frame-line { margin-top: 32px; color: var(--text-secondary); }
 .hero .flow, .hero .flow-panels { text-align: left; }
@@ -161,25 +161,24 @@ button { font: inherit; color: inherit; }
 .particles span:nth-child(7) { animation-delay: 3.75s; margin-top: -13px; }
 .particles span:nth-child(8) { animation-delay: 4.37s; margin-top: 6px; }
 .particles span.reject { animation-name: reject; }
-/* Gris à l'entrée, turquoise après le tri, doré en arrivant au résultat */
+/* L'entonnoir du tri couvre ~22 à 33 % du trajet : les points y entrent gris et en ressortent
+   turquoise, puis deviennent dorés en arrivant au résultat */
 @keyframes travel {
     0% { left: 0; opacity: 0; background: var(--raw); box-shadow: none; }
     4% { opacity: 1; }
-    33% { background: var(--raw); box-shadow: none; }
-    38% { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+    25% { background: var(--raw); box-shadow: none; }
+    30% { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
     88% { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
     94% { background: var(--gold); box-shadow: 0 0 12px var(--gold); }
     98% { opacity: 1; }
     100% { left: 100%; opacity: 0; background: var(--gold); }
 }
-/* Écarté juste avant le tri : il quitte le flux sans changer d'aspect */
+/* Écarté par le tri : il entre dans l'entonnoir et n'en ressort pas */
 @keyframes reject {
-    0% { left: 0; opacity: 0; transform: none; }
+    0% { left: 0; opacity: 0; }
     4% { opacity: 1; }
-    18% { left: 18%; opacity: 1; transform: none; }
-    32% { left: 19.5%; opacity: 0.9; transform: translateY(-44px); }
-    42% { left: 20%; opacity: 0; transform: translateY(-58px); }
-    100% { left: 20%; opacity: 0; transform: translateY(-58px); }
+    26% { left: 26%; opacity: 1; }
+    27%, 100% { left: 27%; opacity: 0; }
 }
 
 .stations { position: absolute; top: 0; bottom: 0; left: var(--lead); right: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); z-index: 2; }
@@ -196,7 +195,6 @@ button { font: inherit; color: inherit; }
 .station-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .station-text { display: flex; flex-direction: column; align-items: inherit; }
 .station-label { font-weight: 600; font-size: 0.95rem; }
-.station-sub { font-size: 0.8rem; color: var(--text-tertiary); line-height: 1.35; }
 .station:hover .station-icon { transform: scale(1.08); box-shadow: 0 0 0 7px var(--accent-soft); }
 .station[aria-expanded="true"] .station-icon { background: var(--accent); color: #062420; box-shadow: 0 0 26px var(--accent-glow); }
 .station[aria-expanded="true"] .station-label { color: var(--accent); }
@@ -389,11 +387,11 @@ button { font: inherit; color: inherit; }
 
 /* RESPONSIVE */
 @media (min-width: 1100px) {
-    .lead-1, .frame-line { white-space: nowrap; }
+    .frame-line { white-space: nowrap; }
 }
 
-@media (min-width: 1200px) {
-    .station-sub { white-space: nowrap; }
+@media (min-width: 1140px) {
+    .lead-1 { white-space: nowrap; }
 }
 
 @media (max-width: 1080px) {
@@ -420,21 +418,21 @@ button { font: inherit; color: inherit; }
     .tube { border: 0; border-radius: 3px; background: linear-gradient(180deg, #172421 0%, #16302B 30%, rgba(45, 212, 191, 0.5) 80%, rgba(245, 196, 81, 0.6) 100%); }
     .particles span { left: 50% !important; top: 0; margin: 0 0 0 -4px !important; animation-name: travel-v; }
     .particles span.reject { animation-name: reject-v; }
+    /* En vertical, l'entonnoir couvre ~15 à 36 % du trajet */
     @keyframes travel-v {
         0% { top: 0; opacity: 0; background: var(--raw); box-shadow: none; }
         4% { opacity: 1; }
-        30% { background: var(--raw); box-shadow: none; }
-        36% { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+        20% { background: var(--raw); box-shadow: none; }
+        30% { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
         86% { background: var(--accent); }
         94% { background: var(--gold); box-shadow: 0 0 12px var(--gold); }
         100% { top: 100%; opacity: 0; background: var(--gold); }
     }
     @keyframes reject-v {
-        0% { top: 0; opacity: 0; transform: none; }
+        0% { top: 0; opacity: 0; }
         4% { opacity: 1; }
-        12% { top: 12%; opacity: 1; transform: none; }
-        24% { top: 13%; opacity: 0; transform: translateX(-18px); }
-        100% { top: 13%; opacity: 0; transform: translateX(-18px); }
+        24% { top: 24%; opacity: 1; }
+        25%, 100% { top: 25%; opacity: 0; }
     }
     .result { align-self: stretch; }
     .result-kpis { max-width: 300px; }
