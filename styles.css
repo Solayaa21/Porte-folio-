@@ -543,3 +543,7 @@ button { font: inherit; color: inherit; }
     .legal dl { grid-template-columns: 1fr; gap: 0; }
     .legal dd { margin-bottom: 10px; }
 }
+
+/* Outils d'une page projet */
+.project-tools { margin-top: 40px; }
+.project-tools h2 { font-size: 1.1rem; margin-bottom: 12px; }

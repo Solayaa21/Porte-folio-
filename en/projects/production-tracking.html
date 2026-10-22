@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Production pipeline tracking | Alexandre Mugular</title>
-    <meta name="description" content="Tracking and visualizing a production pipeline, from the client script to delivery: a Windows app, a daily update and a Power BI dashboard.">
+    <title>Production data and asset management | Alexandre Mugular</title>
+    <meta name="description" content="A dashboard that tracks the progress of every project, fed automatically by the team's files.">
     <link rel="canonical" href="https://alexandremugular.fr/en/projects/production-tracking.html">
     <link rel="alternate" hreflang="fr" href="https://alexandremugular.fr/projets/suivi-de-production.html">
-    <meta property="og:title" content="Production pipeline tracking, from intake to delivery">
-    <meta property="og:image" content="https://alexandremugular.fr/assets/projets/pipeline-dashboard.webp">
+    <meta property="og:title" content="Production data and asset management">
+    <meta property="og:image" content="https://alexandremugular.fr/assets/og-image.png">
     <meta name="theme-color" content="#0B1110">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1110'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%232DD4BF' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
     <link rel="preload" href="../../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -36,100 +36,37 @@
             <a class="crumb" href="../projects.html"><span aria-hidden="true">←</span> All projects</a>
 
             <header class="project-head">
-                <p class="project-context">Video game localization studio, Paris · 2026</p>
-                <h1>Production pipeline tracking, from intake to delivery</h1>
-                <p class="summary">Every production step tracked and visualized, from the client script to delivery. To report to the client precisely, steer projects and price quotes on actual throughput.</p>
+                <p class="project-context">Production company · 2026</p>
+                <h1>Production data and asset management</h1>
+                <p class="summary">A dashboard that tracks the progress of every project, fed automatically by the team's files.</p>
             </header>
 
             <figure class="shot shot-main">
-                <button type="button" data-full="../../assets/projets/pipeline-dashboard.webp" aria-label="Enlarge the dashboard">
-                    <img src="../../assets/projets/pipeline-dashboard.webp" alt="Power BI dashboard: project indicators, progress bar from recording to delivery, progress per batch and language, lines recorded per day" width="1800" height="1010">
+                <button type="button" data-full="../../assets/projets/pipeline-dashboard.webp" aria-label="Enlarge the screenshot">
+                    <img src="../../assets/projets/pipeline-dashboard.webp" alt="Power BI dashboard: project indicators, progress by step, progress by team and daily volume" width="1800" height="1017">
                 </button>
-                <figcaption>The delivered dashboard, shown here on fictitious data.</figcaption>
+                <figcaption>The dashboard, on fictitious data.</figcaption>
             </figure>
 
             <section class="brief" aria-label="In short">
                 <div>
                     <h2>The need</h2>
-                    <p>Production information was scattered: client scripts, tracking files per language copied across several servers, post-production folders cleared after each delivery. Nobody could say where each line of a project stood.</p>
+                    <p>Tracking information was scattered across many files. Knowing where a project stood took time and manual checks.</p>
                 </div>
                 <div>
                     <h2>What I built</h2>
-                    <p>A Windows app that prepares the tracking files from the client script, a daily update that reads the servers without changing anything, and a Power BI dashboard that follows each line from recording to delivery.</p>
+                    <p>Tools that automatically gather and check the team's files and assets, and a Power BI dashboard updated every day.</p>
                 </div>
                 <div>
                     <h2>What it changes</h2>
-                    <p>Project managers see real progress at a glance, know how many studio hours are left, and send the client a clear PDF view. Inconsistencies are flagged instead of being hidden.</p>
+                    <p>Progress is clear at a glance, gaps are flagged, and the client receives a clear status report.</p>
                 </div>
             </section>
 
-            <details class="detail">
-                <summary>The workflow, step by step</summary>
-                <div class="detail-body">
-                    <ol class="circuit">
-                        <li><strong>Master Script Builder</strong><span>Merges the client's scripts into one file without losing a line, and spots what changed from one version to the next.</span></li>
-                        <li><strong>Audio Reference Checker</strong><span>Checks that every reference audio file exists, in the folders or ZIP files sent by the client.</span></li>
-                        <li><strong>Tracker Builder</strong><span>Creates one tracking file per language, in the studio's format, ready for recording.</span></li>
-                        <li><strong>Dashboard Update</strong><span>Reads the tracking files and post-production folders every day, and remembers the steps already seen.</span></li>
-                        <li class="is-final"><strong>Power BI</strong><span>Overview, script line by line, details, remaining files, data quality and client view.</span></li>
-                    </ol>
-                </div>
-            </details>
-
-            <details class="detail">
-                <summary>Screens</summary>
-                <div class="detail-body">
-                    <div class="gallery">
-                        <figure class="shot">
-                            <button type="button" data-full="../../assets/projets/pipeline-client.webp" aria-label="Enlarge the client view"><img src="../../assets/projets/pipeline-client.webp" alt="Client view: progress per language and per character" loading="lazy" width="1800" height="1010"></button>
-                            <figcaption>The client view, exported as a PDF: progress per language and per character.</figcaption>
-                        </figure>
-                        <figure class="shot">
-                            <button type="button" data-full="../../assets/projets/pipeline-qualite.webp" aria-label="Enlarge the data quality page"><img src="../../assets/projets/pipeline-qualite.webp" alt="Data quality page: points to check per batch and language" loading="lazy" width="1800" height="1010"></button>
-                            <figcaption>Data quality: what to check before trusting the figures.</figcaption>
-                        </figure>
-                        <figure class="shot">
-                            <button type="button" data-full="../../assets/projets/pipeline-script.webp" aria-label="Enlarge the script page"><img src="../../assets/projets/pipeline-script.webp" alt="Script page: each line with its production step" loading="lazy" width="1800" height="1010"></button>
-                            <figcaption>The script line by line, with the step each line has reached.</figcaption>
-                        </figure>
-                        <figure class="shot">
-                            <button type="button" data-full="../../assets/projets/pipeline-details.webp" aria-label="Enlarge the details page"><img src="../../assets/projets/pipeline-details.webp" alt="Details page: voice actors, throughput and studio hours left" loading="lazy" width="1800" height="1010"></button>
-                            <figcaption>Details: voice actors, throughput and studio hours left per character.</figcaption>
-                        </figure>
-                        <figure class="shot">
-                            <button type="button" data-full="../../assets/projets/factory-master-script.webp" aria-label="Enlarge the app, Master Script Builder"><img src="../../assets/projets/factory-master-script.webp" alt="Windows app: Master Script Builder screen" loading="lazy" width="1800" height="1097"></button>
-                            <figcaption>The Windows app: the tools follow the order of the project managers' work.</figcaption>
-                        </figure>
-                        <figure class="shot">
-                            <button type="button" data-full="../../assets/projets/factory-audio-checker.webp" aria-label="Enlarge the app, Audio Reference Checker"><img src="../../assets/projets/factory-audio-checker.webp" alt="Windows app: Audio Reference Checker screen" loading="lazy" width="1800" height="1097"></button>
-                            <figcaption>Audio reference checks across folders or ZIP files, with progress and cancel.</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </details>
-
-            <details class="detail">
-                <summary>Technical details</summary>
-                <div class="detail-body">
-                    <ul class="facts">
-                        <li><strong>Windows app in Python</strong>, PySide6 interface, delivered with no installation and no Python on the computer.</li>
-                        <li><strong>138 automated tests</strong>. Tracking file creation was checked cell by cell against a hand-made file: 0 differences across 145,783 cells.</li>
-                        <li><strong>Read-only on the servers</strong>: no client file is ever changed, and an update in progress blocks the others.</li>
-                        <li><strong>Memory of the steps</strong>: what an update has seen stays known, even after post-production folders are cleared.</li>
-                        <li><strong>Power BI model generated by script</strong>: 11 tables, 56 DAX measures, versioned like the rest of the code.</li>
-                        <li><strong>Releases published with Git</strong>, each with its scope, its limits and a way back.</li>
-                        <li><strong>Guides included</strong>: one for project managers, one for the people who maintain the tool.</li>
-                        <li><strong>Built with generative AI</strong> (Claude Code, Codex) under my direction: choices, tests and validation.</li>
-                    </ul>
-                </div>
-            </details>
-
-            <details class="detail">
-                <summary>Tools</summary>
-                <div class="detail-body">
-                    <ul class="chips"><li>Python</li><li>PySide6</li><li>Power BI</li><li>DAX</li><li>Power Query</li><li>Excel</li><li>VBA</li><li>Git</li><li>Claude Code</li><li>Codex</li></ul>
-                </div>
-            </details>
+            <section class="project-tools" aria-label="Tools">
+                <h2>Tools</h2>
+                <ul class="chips"><li>Python</li><li>Power BI</li><li>DAX</li><li>Power Query</li><li>Excel</li></ul>
+            </section>
 
             <div class="project-foot">
                 <a href="../projects.html"><span aria-hidden="true">←</span> All projects</a>
