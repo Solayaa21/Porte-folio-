@@ -43,13 +43,12 @@
                 <p class="summary">Studio schedules feed a SharePoint database automatically, and a custom Power Apps app lets project managers view, book and export hours, with nothing to re-enter.</p>
             </header>
 
-            <ol class="circuit shot-main" aria-label="The workflow">
-                <li><strong>Excel Online schedules</strong><span>Teams book the studios in their usual schedules. Nothing changes for them.</span></li>
-                <li><strong>Power Automate</strong><span>A sync copies the bookings into a SharePoint list, exactly as they are.</span></li>
-                <li><strong>SharePoint list</strong><span>One database of sessions: studio, project, voice actor, team, times, status.</span></li>
-                <li><strong>Power Apps</strong><span>The project managers' scheduling app: day and week views, session details, manual entries.</span></li>
-                <li class="is-final"><strong>Hours export</strong><span>An Excel workbook ready to invoice, generated in one click by Power Automate and an Office Script.</span></li>
-            </ol>
+            <figure class="shot shot-main">
+                <button type="button" data-full="../../assets/projets/planning-semaine.webp" aria-label="Enlarge the weekly schedule">
+                    <img src="../../assets/projets/planning-semaine.webp" alt="Scheduling app: weekly indicators, team absences and sessions of the five studios, day by day" width="1800" height="970">
+                </button>
+                <figcaption>The scheduling app, week view, on fictitious data.</figcaption>
+            </figure>
 
             <section class="brief" aria-label="In short">
                 <div>
@@ -67,6 +66,19 @@
             </section>
 
             <details class="detail">
+                <summary>The workflow, step by step</summary>
+                <div class="detail-body">
+                    <ol class="circuit">
+                        <li><strong>Excel Online schedules</strong><span>Teams book the studios in their usual schedules. Nothing changes for them.</span></li>
+                        <li><strong>Power Automate</strong><span>A sync copies the bookings into a SharePoint list, exactly as they are.</span></li>
+                        <li><strong>SharePoint list</strong><span>One database of sessions: studio, project, voice actor, team, times, status.</span></li>
+                        <li><strong>Power Apps</strong><span>The project managers' scheduling app: day and week views, session details, manual entries.</span></li>
+                        <li class="is-final"><strong>Hours export</strong><span>An Excel workbook ready to invoice, generated in one click by Power Automate and an Office Script.</span></li>
+                    </ol>
+                </div>
+            </details>
+
+            <details class="detail">
                 <summary>The app</summary>
                 <div class="detail-body">
                     <ul class="facts">
@@ -78,6 +90,10 @@
                         <li><strong>Hours export</strong>: current month, previous month or custom dates, filtered by project or studio. Only confirmed bookings count.</li>
                         <li><strong>Two versions</strong> of the app: one for project managers, one for voice directors.</li>
                     </ul>
+                    <figure class="shot shot-detail">
+                        <button type="button" data-full="../../assets/projets/planning-jour.webp" aria-label="Enlarge the day view"><img src="../../assets/projets/planning-jour.webp" alt="Day view: each studio hour by hour" loading="lazy" width="1800" height="866"></button>
+                        <figcaption>The day view: each studio hour by hour, with the status of every session.</figcaption>
+                    </figure>
                 </div>
             </details>
 
@@ -114,6 +130,11 @@
             <p><a href="mailto:contact@alexandremugular.fr">contact@alexandremugular.fr</a></p>
         </div>
     </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged screenshot" hidden>
+        <button class="lightbox-close" type="button" aria-label="Close">×</button>
+        <img alt="">
+    </div>
 
     <script src="../../script.js"></script>
 </body>

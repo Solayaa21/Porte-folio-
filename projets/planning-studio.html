@@ -43,13 +43,12 @@
                 <p class="summary">Les plannings des studios alimentent automatiquement une base SharePoint, et une application Power Apps sur mesure permet aux chefs de projet de consulter, réserver et exporter les heures, sans rien ressaisir.</p>
             </header>
 
-            <ol class="circuit shot-main" aria-label="Le circuit">
-                <li><strong>Plannings Excel en ligne</strong><span>Les équipes réservent les studios dans leurs plannings habituels. Rien ne change pour elles.</span></li>
-                <li><strong>Power Automate</strong><span>Une synchronisation recopie les réservations dans une liste SharePoint, à l'identique.</span></li>
-                <li><strong>Liste SharePoint</strong><span>Une base unique des séances : studio, projet, comédien, équipe, horaires, statut.</span></li>
-                <li><strong>Power Apps</strong><span>L'application de planning des chefs de projet : vues par jour et par semaine, détail d'une séance, ajout manuel.</span></li>
-                <li class="is-final"><strong>Export des heures</strong><span>Un classeur Excel prêt à facturer, généré en un clic par Power Automate et un Office Script.</span></li>
-            </ol>
+            <figure class="shot shot-main">
+                <button type="button" data-full="../assets/projets/planning-semaine.webp" aria-label="Agrandir le planning de la semaine">
+                    <img src="../assets/projets/planning-semaine.webp" alt="Application de planning : indicateurs de la semaine, équipe absente et séances des cinq studios, jour par jour" width="1800" height="970">
+                </button>
+                <figcaption>L'application de planning, vue semaine, sur données fictives.</figcaption>
+            </figure>
 
             <section class="brief" aria-label="En bref">
                 <div>
@@ -67,6 +66,19 @@
             </section>
 
             <details class="detail">
+                <summary>Le circuit, étape par étape</summary>
+                <div class="detail-body">
+                    <ol class="circuit">
+                        <li><strong>Plannings Excel en ligne</strong><span>Les équipes réservent les studios dans leurs plannings habituels. Rien ne change pour elles.</span></li>
+                        <li><strong>Power Automate</strong><span>Une synchronisation recopie les réservations dans une liste SharePoint, à l'identique.</span></li>
+                        <li><strong>Liste SharePoint</strong><span>Une base unique des séances : studio, projet, comédien, équipe, horaires, statut.</span></li>
+                        <li><strong>Power Apps</strong><span>L'application de planning des chefs de projet : vues par jour et par semaine, détail d'une séance, ajout manuel.</span></li>
+                        <li class="is-final"><strong>Export des heures</strong><span>Un classeur Excel prêt à facturer, généré en un clic par Power Automate et un Office Script.</span></li>
+                    </ol>
+                </div>
+            </details>
+
+            <details class="detail">
                 <summary>L'application</summary>
                 <div class="detail-body">
                     <ul class="facts">
@@ -78,6 +90,10 @@
                         <li><strong>Export des heures</strong> : mois en cours, mois précédent ou dates au choix, filtré par projet ou par studio. Seules les réservations confirmées comptent.</li>
                         <li><strong>Deux versions</strong> de l'application : une pour les chefs de projet, une pour les directeurs artistiques.</li>
                     </ul>
+                    <figure class="shot shot-detail">
+                        <button type="button" data-full="../assets/projets/planning-jour.webp" aria-label="Agrandir la vue jour"><img src="../assets/projets/planning-jour.webp" alt="Vue jour : chaque studio heure par heure" loading="lazy" width="1800" height="866"></button>
+                        <figcaption>La vue jour : chaque studio heure par heure, avec le statut de chaque séance.</figcaption>
+                    </figure>
                 </div>
             </details>
 
@@ -114,6 +130,11 @@
             <p><a href="mailto:contact@alexandremugular.fr">contact@alexandremugular.fr</a></p>
         </div>
     </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Capture agrandie" hidden>
+        <button class="lightbox-close" type="button" aria-label="Fermer">×</button>
+        <img alt="">
+    </div>
 
     <script src="../script.js"></script>
 </body>
