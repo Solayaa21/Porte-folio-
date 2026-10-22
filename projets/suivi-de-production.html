@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suivi du pipeline de production | Alexandre Mugular</title>
-    <meta name="description" content="Tracking et visualisation d'un pipeline de production, de la réception du script client à la livraison : une application Windows, une mise à jour quotidienne et un tableau de bord Power BI.">
+    <title>Gestion des données et des assets de production | Alexandre Mugular</title>
+    <meta name="description" content="Un tableau de bord qui suit l'avancement de chaque projet, alimenté automatiquement par les fichiers de l'équipe.">
     <link rel="canonical" href="https://alexandremugular.fr/projets/suivi-de-production.html">
     <link rel="alternate" hreflang="en" href="https://alexandremugular.fr/en/projects/production-tracking.html">
-    <meta property="og:title" content="Suivi du pipeline de production, de la réception à la livraison">
-    <meta property="og:image" content="https://alexandremugular.fr/assets/projets/pipeline-dashboard.webp">
+    <meta property="og:title" content="Gestion des données et des assets de production">
+    <meta property="og:image" content="https://alexandremugular.fr/assets/og-image.png">
     <meta name="theme-color" content="#0B1110">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1110'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%232DD4BF' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
     <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -36,100 +36,37 @@
             <a class="crumb" href="../projets.html"><span aria-hidden="true">←</span> Tous les projets</a>
 
             <header class="project-head">
-                <p class="project-context">Studio de localisation de jeux vidéo, Paris · 2026</p>
-                <h1>Suivi du pipeline de production, de la réception à la livraison</h1>
-                <p class="summary">Chaque étape de production tracée et visualisée, de la réception du script client jusqu'à la livraison. Pour rendre compte au client avec précision, piloter les projets et chiffrer les devis sur les cadences réelles.</p>
+                <p class="project-context">Entreprise de production · 2026</p>
+                <h1>Gestion des données et des assets de production</h1>
+                <p class="summary">Un tableau de bord qui suit l'avancement de chaque projet, alimenté automatiquement par les fichiers de l'équipe.</p>
             </header>
 
             <figure class="shot shot-main">
-                <button type="button" data-full="../assets/projets/pipeline-dashboard.webp" aria-label="Agrandir le tableau de bord">
-                    <img src="../assets/projets/pipeline-dashboard.webp" alt="Tableau de bord Power BI : indicateurs du projet, barre de progression de l'enregistrement à la livraison, avancement par lot et par langue, lignes enregistrées par jour" width="1800" height="1010">
+                <button type="button" data-full="../assets/projets/pipeline-dashboard.webp" aria-label="Agrandir la capture">
+                    <img src="../assets/projets/pipeline-dashboard.webp" alt="Tableau de bord Power BI : indicateurs du projet, progression par étape, avancement par équipe et volume traité par jour" width="1800" height="1017">
                 </button>
-                <figcaption>Le tableau de bord livré, ici sur des données fictives.</figcaption>
+                <figcaption>Le tableau de bord, sur des données fictives.</figcaption>
             </figure>
 
             <section class="brief" aria-label="En bref">
                 <div>
                     <h2>Le besoin</h2>
-                    <p>Les informations de production étaient dispersées : scripts clients, fichiers de suivi par langue copiés sur plusieurs serveurs, dossiers de post-production vidés après chaque livraison. Personne ne pouvait dire où en était chaque ligne d'un projet.</p>
+                    <p>Les informations de suivi étaient dispersées dans de nombreux fichiers. Savoir où en était un projet demandait du temps et des vérifications à la main.</p>
                 </div>
                 <div>
                     <h2>Ce que j'ai mis en place</h2>
-                    <p>Une application Windows qui prépare les fichiers de suivi à partir du script client, une mise à jour quotidienne qui lit les serveurs sans rien modifier, et un tableau de bord Power BI qui suit chaque ligne de l'enregistrement à la livraison.</p>
+                    <p>Des outils qui rassemblent et contrôlent automatiquement les fichiers et les assets de l'équipe, et un tableau de bord Power BI mis à jour chaque jour.</p>
                 </div>
                 <div>
                     <h2>Ce que ça change</h2>
-                    <p>Les chefs de projet voient l'avancement réel d'un coup d'œil, savent combien d'heures de studio il reste, et envoient au client une vue claire en PDF. Les incohérences sont signalées au lieu d'être cachées.</p>
+                    <p>L'avancement se lit d'un coup d'œil, les écarts sont signalés, et le client reçoit un état clair.</p>
                 </div>
             </section>
 
-            <details class="detail">
-                <summary>Le circuit, étape par étape</summary>
-                <div class="detail-body">
-                    <ol class="circuit">
-                        <li><strong>Master Script Builder</strong><span>Fusionne les scripts du client en un seul fichier sans perdre une ligne, et repère ce qui a changé d'une version à l'autre.</span></li>
-                        <li><strong>Audio Reference Checker</strong><span>Vérifie que chaque fichier audio de référence existe, dans les dossiers ou les ZIP livrés par le client.</span></li>
-                        <li><strong>Tracker Builder</strong><span>Crée un fichier de suivi par langue, au format du studio, prêt pour l'enregistrement.</span></li>
-                        <li><strong>Dashboard Update</strong><span>Lit chaque jour les fichiers de suivi et les dossiers de post-production, et garde la mémoire des étapes déjà vues.</span></li>
-                        <li class="is-final"><strong>Power BI</strong><span>Vue d'ensemble, script ligne à ligne, détails, fichiers restants, qualité des données et vue client.</span></li>
-                    </ol>
-                </div>
-            </details>
-
-            <details class="detail">
-                <summary>Les écrans</summary>
-                <div class="detail-body">
-                    <div class="gallery">
-                        <figure class="shot">
-                            <button type="button" data-full="../assets/projets/pipeline-client.webp" aria-label="Agrandir la vue client"><img src="../assets/projets/pipeline-client.webp" alt="Vue client : avancement par langue et par personnage" loading="lazy" width="1800" height="1010"></button>
-                            <figcaption>La vue client, à exporter en PDF : avancement par langue et par personnage.</figcaption>
-                        </figure>
-                        <figure class="shot">
-                            <button type="button" data-full="../assets/projets/pipeline-qualite.webp" aria-label="Agrandir la page qualité des données"><img src="../assets/projets/pipeline-qualite.webp" alt="Page qualité des données : points à vérifier par lot et par langue" loading="lazy" width="1800" height="1010"></button>
-                            <figcaption>La qualité des données : ce qu'il faut vérifier avant de se fier aux chiffres.</figcaption>
-                        </figure>
-                        <figure class="shot">
-                            <button type="button" data-full="../assets/projets/pipeline-script.webp" aria-label="Agrandir la page script"><img src="../assets/projets/pipeline-script.webp" alt="Page script : chaque ligne avec son étape de production" loading="lazy" width="1800" height="1010"></button>
-                            <figcaption>Le script ligne à ligne, avec l'étape atteinte par chacune.</figcaption>
-                        </figure>
-                        <figure class="shot">
-                            <button type="button" data-full="../assets/projets/pipeline-details.webp" aria-label="Agrandir la page détails"><img src="../assets/projets/pipeline-details.webp" alt="Page détails : comédiens, cadences et heures de studio restantes" loading="lazy" width="1800" height="1010"></button>
-                            <figcaption>Les détails : comédiens, cadences et heures de studio restantes par personnage.</figcaption>
-                        </figure>
-                        <figure class="shot">
-                            <button type="button" data-full="../assets/projets/factory-master-script.webp" aria-label="Agrandir l'application, Master Script Builder"><img src="../assets/projets/factory-master-script.webp" alt="Application Windows : écran Master Script Builder" loading="lazy" width="1800" height="1097"></button>
-                            <figcaption>L'application Windows : les outils suivent l'ordre du travail des chefs de projet.</figcaption>
-                        </figure>
-                        <figure class="shot">
-                            <button type="button" data-full="../assets/projets/factory-audio-checker.webp" aria-label="Agrandir l'application, Audio Reference Checker"><img src="../assets/projets/factory-audio-checker.webp" alt="Application Windows : écran Audio Reference Checker" loading="lazy" width="1800" height="1097"></button>
-                            <figcaption>Le contrôle des références audio, dossiers ou ZIP, avec progression et annulation.</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </details>
-
-            <details class="detail">
-                <summary>Côté technique</summary>
-                <div class="detail-body">
-                    <ul class="facts">
-                        <li><strong>Application Windows en Python</strong>, interface PySide6, livrée sans installation ni Python sur le poste.</li>
-                        <li><strong>138 tests automatisés</strong>. La création des fichiers de suivi a été vérifiée cellule par cellule contre un fichier fait à la main : 0 écart sur 145 783 cellules.</li>
-                        <li><strong>Lecture seule sur les serveurs</strong> : aucun fichier client n'est modifié, et une mise à jour en cours bloque les autres.</li>
-                        <li><strong>Mémoire des étapes</strong> : ce qu'une mise à jour a vu reste connu, même quand les dossiers de post-production sont vidés.</li>
-                        <li><strong>Modèle Power BI généré par script</strong> : 11 tables, 56 mesures DAX, versionné comme le reste du code.</li>
-                        <li><strong>Versions publiées avec Git</strong>, chacune avec son périmètre, ses limites et son retour arrière.</li>
-                        <li><strong>Guides fournis</strong> : un pour les chefs de projet, un pour les personnes qui maintiennent l'outil.</li>
-                        <li><strong>Développé avec l'IA générative</strong> (Claude Code, Codex), sous ma direction : choix, tests et validation.</li>
-                    </ul>
-                </div>
-            </details>
-
-            <details class="detail">
-                <summary>Outils</summary>
-                <div class="detail-body">
-                    <ul class="chips"><li>Python</li><li>PySide6</li><li>Power BI</li><li>DAX</li><li>Power Query</li><li>Excel</li><li>VBA</li><li>Git</li><li>Claude Code</li><li>Codex</li></ul>
-                </div>
-            </details>
+            <section class="project-tools" aria-label="Outils">
+                <h2>Outils</h2>
+                <ul class="chips"><li>Python</li><li>Power BI</li><li>DAX</li><li>Power Query</li><li>Excel</li></ul>
+            </section>
 
             <div class="project-foot">
                 <a href="../projets.html"><span aria-hidden="true">←</span> Tous les projets</a>
