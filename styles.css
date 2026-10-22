@@ -333,11 +333,8 @@ button { font: inherit; color: inherit; }
 }
 .hec h2 { font-size: 1.8rem; }
 .hec-program { color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 24px; }
-.hec-courses { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
-.hec-courses + .session { margin-top: 22px; }
+.hec-courses { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .hec-courses li { background: rgba(11, 17, 16, 0.55); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
-.hec-courses.is-next li { background: transparent; border-style: dashed; }
-.session { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 10px; }
 .hec-courses strong { display: block; font-size: 0.95rem; line-height: 1.35; margin-bottom: 4px; }
 .hec-courses .course-detail { display: block; font-size: 0.85rem; color: var(--text-secondary); }
 
@@ -491,6 +488,7 @@ button { font: inherit; color: inherit; }
 .shot button:hover { border-color: var(--border-strong); }
 .shot img { width: 100%; height: auto; }
 .shot figcaption { font-size: 0.85rem; color: var(--text-tertiary); margin-top: 8px; }
+.shot-detail { margin-top: 22px; }
 .shot-main { margin-bottom: 40px; }
 
 .brief { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
@@ -526,23 +524,10 @@ button { font: inherit; color: inherit; }
 .project-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 40px; }
 .project-foot a { color: var(--accent); font-weight: 600; }
 
-/* Visuel de carte sans capture : le circuit Power Platform en icônes */
-.flow-visual { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 20px; height: 100%; background: radial-gradient(circle at 50% 40%, rgba(45, 212, 191, 0.08), transparent 70%); }
-.flow-visual .fv-node { display: grid; justify-items: center; gap: 8px; font-size: 0.75rem; color: var(--text-secondary); text-align: center; }
-.flow-visual .fv-icon { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; background: var(--surface-2); border: 1px solid var(--border-strong); color: var(--accent); }
-.flow-visual .fv-icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.flow-visual .fv-arrow { color: var(--text-tertiary); font-size: 1.2rem; }
-.flow-visual .is-final .fv-icon { color: var(--gold); border-color: rgba(245, 196, 81, 0.5); }
-
 @media (max-width: 960px) {
     .brief, .gallery { grid-template-columns: 1fr; }
     .circuit { grid-auto-flow: row; }
     .circuit li:not(:last-child)::after { top: auto; bottom: -12px; right: auto; left: 22px; transform: rotate(135deg); }
-}
-@media (max-width: 640px) {
-    .flow-visual { gap: 6px; padding: 12px; }
-    .flow-visual .fv-icon { width: 42px; height: 42px; }
-    .flow-visual .fv-node span { display: none; }
 }
 /* MENTIONS LÉGALES */
 .legal { max-width: 780px; }
@@ -558,6 +543,3 @@ button { font: inherit; color: inherit; }
     .legal dl { grid-template-columns: 1fr; gap: 0; }
     .legal dd { margin-bottom: 10px; }
 }
-
-.placeholder-note { margin-top: 18px; padding: 28px; border: 1px dashed var(--border-strong); border-radius: var(--radius); color: var(--text-tertiary); text-align: center; font-size: 0.92rem; background-image: repeating-linear-gradient(135deg, transparent 0 12px, rgba(45, 212, 191, 0.04) 12px 24px); }
-.circuit.shot-main { margin-bottom: 40px; }
