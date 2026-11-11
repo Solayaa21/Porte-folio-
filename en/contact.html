@@ -37,6 +37,36 @@
     <main id="contenu" class="page">
         <div class="container">
             <h1 class="page-title">Contact</h1>
+            <p class="page-lead">Describe your need in a few lines: reply within 2 business days, no commitment.</p>
+
+            <form class="quote-form" name="devis" method="POST" action="/en/thanks.html" data-netlify="true" netlify-honeypot="champ-robot">
+                <input type="hidden" name="form-name" value="devis">
+                <input type="hidden" name="langue" value="en">
+                <p class="hp" aria-hidden="true"><label>Leave empty <input name="champ-robot" tabindex="-1" autocomplete="off"></label></p>
+                <div class="field-row">
+                    <label class="field"><span>Name *</span><input type="text" name="nom" autocomplete="name" required></label>
+                    <label class="field"><span>E-mail *</span><input type="email" name="email" autocomplete="email" required></label>
+                </div>
+                <div class="field-row">
+                    <label class="field"><span>Company</span><input type="text" name="entreprise" autocomplete="organization"></label>
+                    <label class="field"><span>Phone</span><input type="tel" name="telephone" autocomplete="tel"></label>
+                </div>
+                <label class="field"><span>Your need *</span><textarea name="besoin" rows="5" required placeholder="For example: bring our Excel tracking files together and get a dashboard updated every week."></textarea></label>
+                <label class="field field-half"><span>How did you find me?</span>
+                    <select name="source">
+                        <option value="">Choose</option>
+                        <option>Google search</option>
+                        <option>LinkedIn</option>
+                        <option>Malt</option>
+                        <option>Word of mouth</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+                <p class="form-note">Your details are only used to reply to you. <a href="legal-notice.html#data">Personal data</a></p>
+                <button class="btn btn-primary" type="submit">Request a quote</button>
+            </form>
+
+            <h2 class="contact-sub">Or directly</h2>
 
             <ul class="contact-list">
                 <li>
