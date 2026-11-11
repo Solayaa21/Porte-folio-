@@ -37,6 +37,36 @@
     <main id="contenu" class="page">
         <div class="container">
             <h1 class="page-title">Contact</h1>
+            <p class="page-lead">Décrivez votre besoin en quelques lignes : réponse sous 48 h ouvrées, sans engagement.</p>
+
+            <form class="quote-form" name="devis" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="champ-robot">
+                <input type="hidden" name="form-name" value="devis">
+                <input type="hidden" name="langue" value="fr">
+                <p class="hp" aria-hidden="true"><label>Ne pas remplir <input name="champ-robot" tabindex="-1" autocomplete="off"></label></p>
+                <div class="field-row">
+                    <label class="field"><span>Nom *</span><input type="text" name="nom" autocomplete="name" required></label>
+                    <label class="field"><span>E-mail *</span><input type="email" name="email" autocomplete="email" required></label>
+                </div>
+                <div class="field-row">
+                    <label class="field"><span>Entreprise</span><input type="text" name="entreprise" autocomplete="organization"></label>
+                    <label class="field"><span>Téléphone</span><input type="tel" name="telephone" autocomplete="tel"></label>
+                </div>
+                <label class="field"><span>Votre besoin *</span><textarea name="besoin" rows="5" required placeholder="Par exemple : centraliser nos fichiers de suivi Excel et avoir un tableau de bord à jour chaque semaine."></textarea></label>
+                <label class="field field-half"><span>Comment m'avez-vous trouvé ?</span>
+                    <select name="source">
+                        <option value="">Choisir</option>
+                        <option>Recherche Google</option>
+                        <option>LinkedIn</option>
+                        <option>Malt</option>
+                        <option>Bouche-à-oreille</option>
+                        <option>Autre</option>
+                    </select>
+                </label>
+                <p class="form-note">Vos informations servent uniquement à vous répondre. <a href="mentions-legales.html#donnees">Données personnelles</a></p>
+                <button class="btn btn-primary" type="submit">Demander un devis</button>
+            </form>
+
+            <h2 class="contact-sub">Ou directement</h2>
 
             <ul class="contact-list">
                 <li>
